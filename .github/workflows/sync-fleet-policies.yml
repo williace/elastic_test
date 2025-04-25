@@ -22,4 +22,4 @@ jobs:
         env:
           ELASTIC_URL: ${{ secrets.ELASTIC_URL }}
           ELASTIC_API_KEY: ${{ secrets.ELASTIC_API_KEY }}
-        run: .github/scripts/sync-fleet-policies.sh
+        run: ./sync-fleet-policies.sh
