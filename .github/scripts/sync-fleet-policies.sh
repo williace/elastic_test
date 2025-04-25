@@ -85,7 +85,7 @@ for file in $FILES; do
       -H "Content-Type: application/json" \
       -H "kbn-xsrf: true" \
       -H "Authorization: ApiKey $ELASTIC_API_KEY" \
-      --data "@$file" --fail --silent --show-error
+      --data "@${file}" --fail --silent --show-error
   else
     echo "❌ Unexpected response from Elastic: HTTP $STATUS"
     exit 1
