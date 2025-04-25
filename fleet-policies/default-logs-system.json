@@ -1,7 +1,12 @@
 {
-  "name": "new2-example-agent-policy",
+  "name": "test",
+  "description": "",
   "namespace": "default",
-  "monitoring_enabled": ["logs", "metrics"],
-  "is_default": false,
-  "is_managed": false
+  "monitoring_enabled": [
+    "logs",
+    "metrics",
+    "traces"
+  ],
+  "inactivity_timeout": 1209600,
+  "is_protected": false
 }
