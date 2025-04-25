@@ -1,5 +1,5 @@
 {
-  "name": "example-agent-policy",
+  "name": "new2-example-agent-policy",
   "namespace": "default",
   "monitoring_enabled": ["logs", "metrics"],
   "is_default": false,
