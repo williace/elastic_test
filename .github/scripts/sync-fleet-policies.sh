@@ -43,7 +43,7 @@ for file in $FILES; do
 
   if [[ -n "$MONITORING" ]]; then
     for val in $MONITORING; do
-      if [[ "$val" != "logs" && "$val" != "metrics"]]; then
+      if [[ "$val" != "logs" && "$val" != "metrics" ]]; then
         echo "❌ ERROR: Invalid monitoring_enabled value '$val'"
         exit 1
       fi
