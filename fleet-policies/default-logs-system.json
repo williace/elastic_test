@@ -1,5 +1,5 @@
 {
-  "id": "64ed160e-5a5d-48db-aa78-927d5703efa2"
+  "id": "0b22dc97-f819-46db-bb24-16873ea2bfa2"
   "name": "default-logs-system",
   "namespace": "default",
   "monitoring_enabled": ["logs"],
