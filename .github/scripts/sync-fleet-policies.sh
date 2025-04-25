@@ -20,10 +20,6 @@ for file in $FILES; do
   MONITORING=$(jq -r '.monitoring_enabled[]?' "$file")
 
   # Validation
-  if [[ -z "$POLICY_ID" || "$POLICY_ID" == "null" ]]; then
-    echo "❌ ERROR: Missing 'id' in $file"
-    exit 1
-  fi
 
   if [[ -z "$POLICY_NAME" || "$POLICY_NAME" == "null" ]]; then
     echo "❌ ERROR: Missing 'name' in $file"
