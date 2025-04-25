@@ -1,0 +1,60 @@
+{
+  "id": "default-logs-system",
+  "name": "default-logs-system",
+  "namespace": "default",
+  "description": "Policy with System integration for logs and metrics",
+  "monitoring_enabled": ["logs", "metrics"],
+  "inactivity_timeout": 1209600,
+  "is_managed": true,
+  "package_policies": [
+    {
+      "name": "system-1",
+      "package": {
+        "name": "system",
+        "version": "1.40.0"
+      },
+      "inputs": [
+        {
+          "type": "system/metrics",
+          "enabled": true,
+          "streams": [
+            {
+              "enabled": true,
+              "data_stream": {
+                "dataset": "system.cpu",
+                "type": "metrics"
+              }
+            },
+            {
+              "enabled": true,
+              "data_stream": {
+                "dataset": "system.memory",
+                "type": "metrics"
+              }
+            }
+          ]
+        },
+        {
+          "type": "system/logs",
+          "enabled": true,
+          "streams": [
+            {
+              "enabled": true,
+              "data_stream": {
+                "dataset": "system.syslog",
+                "type": "logs"
+              }
+            },
+            {
+              "enabled": true,
+              "data_stream": {
+                "dataset": "system.auth",
+                "type": "logs"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
