@@ -4,8 +4,7 @@
   "namespace": "default",
   "monitoring_enabled": [
     "logs",
-    "metrics",
-    "traces"
+    "metrics"
   ],
   "inactivity_timeout": 1209600,
   "is_protected": false
