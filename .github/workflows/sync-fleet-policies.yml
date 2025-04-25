@@ -1,0 +1,25 @@
+name: Sync Elastic Fleet Policies
+
+on:
+  push:
+    paths:
+      - 'fleet-policies/*.json'
+      - '.github/scripts/sync-fleet-policies.sh'
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📦 Checkout repository
+        uses: actions/checkout@v3
+
+      - name: 📥 Install dependencies
+        run: sudo apt-get install -y jq
+
+      - name: 🔁 Run sync script
+        env:
+          ELASTIC_URL: ${{ secrets.ELASTIC_URL }}
+          ELASTIC_API_KEY: ${{ secrets.ELASTIC_API_KEY }}
+        run: .github/scripts/sync-fleet-policies.sh
